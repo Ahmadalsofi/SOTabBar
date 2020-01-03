@@ -32,11 +32,6 @@ class ViewController: SOTabBarViewController {
     
     override func soTabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int) {
         print("did Tapped On \(index)")
-        if index == 2 {
-            tabBar.backgroundColor = UIColor.black
-        }else {
-             tabBar.backgroundColor = UIColor.white
-        }
     }
 }
 
