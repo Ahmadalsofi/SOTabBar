@@ -76,7 +76,7 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
         constraints.forEach({ $0.isActive = true })
     }
     
-    public func soTabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int) {
+    open func soTabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int) {
         
         let previousVC = viewControllers?[index]
         previousVC?.willMove(toParent: nil)
@@ -99,21 +99,21 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
 
 public struct SOTabBarSetting {
     
-    static var tabBarHeight: CGFloat = 66
-    static var tabBarTintColor: UIColor = UIColor(red: 250/255, green: 51/255, blue: 24/255, alpha: 1)
-    static var tabBarBackground: UIColor = UIColor.white
-    static var tabBarCircleSize = CGSize(width: 65, height: 65)
-    static var tabBarSizeImage: CGFloat = 25
-    static var tabBarShadowColor = UIColor.lightGray.cgColor
-    static var tabBarSizeSelectedImage: CGFloat = 20
-    static var tabBarAnimationDurationTime: Double = 0.4
+    public static var tabBarHeight: CGFloat = 66
+    public static var tabBarTintColor: UIColor = UIColor(red: 250/255, green: 51/255, blue: 24/255, alpha: 1)
+    public static var tabBarBackground: UIColor = UIColor.white
+    public static var tabBarCircleSize = CGSize(width: 65, height: 65)
+    public static var tabBarSizeImage: CGFloat = 25
+    public static var tabBarShadowColor = UIColor.lightGray.cgColor
+    public static var tabBarSizeSelectedImage: CGFloat = 20
+    public static var tabBarAnimationDurationTime: Double = 0.4
     
 }
 
 
 // use this protocol to detect when a tab bar item is pressed
 @available(iOS 10.0, *)
-public protocol SOTabBarDelegate: AnyObject {
-    func soTabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int)
+protocol SOTabBarDelegate: AnyObject {
+     func soTabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int)
 }
 
