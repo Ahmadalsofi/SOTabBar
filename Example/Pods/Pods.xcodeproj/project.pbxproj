@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		08EB6378B4F0463DB168639A72823CB2 /* Pods-SOTabBar_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 671D479EC4351ADCC690119052CE9830 /* Pods-SOTabBar_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		301CDD14E8B8654D03C9A0B84D8FCCB9 /* SOTabBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 467BA24990A32B588507DC8A006C0D5B /* SOTabBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CCFE7CF23BF9FF5002E3B92 /* SOTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CC23BF9FF5002E3B92 /* SOTabBarViewController.swift */; };
-		3CCFE7D023BF9FF5002E3B92 /* SOTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CD23BF9FF5002E3B92 /* SOTabBarView.swift */; };
-		3CCFE7D123BF9FF5002E3B92 /* SOTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CE23BF9FF5002E3B92 /* SOTabView.swift */; };
+		3CCFE7D223BFA335002E3B92 /* SOTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CD23BF9FF5002E3B92 /* SOTabBarView.swift */; };
+		3CCFE7D323BFA337002E3B92 /* SOTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CC23BF9FF5002E3B92 /* SOTabBarViewController.swift */; };
+		3CCFE7D423BFA33A002E3B92 /* SOTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CE23BF9FF5002E3B92 /* SOTabView.swift */; };
 		659BBD7C1B8A12D7B2596F66A2C12C83 /* SOTabBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67808205CB6F0A77FE7C18966DBD32BD /* SOTabBar-dummy.m */; };
 		6691EC7119EA8AA06950232949E24405 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		6CBBCD5545934F99990CB6B11A819136 /* Pods-SOTabBar_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B16DFFEEEE6928AC9B1E80D2B2457A /* Pods-SOTabBar_Example-dummy.m */; };
@@ -376,6 +376,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCFE7D323BFA337002E3B92 /* SOTabBarViewController.swift in Sources */,
+				3CCFE7D223BFA335002E3B92 /* SOTabBarView.swift in Sources */,
+				3CCFE7D423BFA33A002E3B92 /* SOTabView.swift in Sources */,
 				659BBD7C1B8A12D7B2596F66A2C12C83 /* SOTabBar-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,9 +387,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCFE7D023BF9FF5002E3B92 /* SOTabBarView.swift in Sources */,
-				3CCFE7CF23BF9FF5002E3B92 /* SOTabBarViewController.swift in Sources */,
-				3CCFE7D123BF9FF5002E3B92 /* SOTabView.swift in Sources */,
 				6CBBCD5545934F99990CB6B11A819136 /* Pods-SOTabBar_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +469,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SOTabBar/SOTabBar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SOTabBar/SOTabBar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SOTabBar/SOTabBar.modulemap";
 				PRODUCT_MODULE_NAME = SOTabBar;
@@ -477,7 +477,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -500,7 +500,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SOTabBar/SOTabBar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SOTabBar/SOTabBar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SOTabBar/SOTabBar.modulemap";
 				PRODUCT_MODULE_NAME = SOTabBar;
@@ -508,7 +508,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

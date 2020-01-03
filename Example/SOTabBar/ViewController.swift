@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SOTabBar
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
