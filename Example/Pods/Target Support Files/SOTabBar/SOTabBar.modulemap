@@ -1,0 +1,6 @@
+framework module SOTabBar {
+  umbrella header "SOTabBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

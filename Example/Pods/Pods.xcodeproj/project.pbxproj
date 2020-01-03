@@ -1,0 +1,787 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08EB6378B4F0463DB168639A72823CB2 /* Pods-SOTabBar_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 671D479EC4351ADCC690119052CE9830 /* Pods-SOTabBar_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		301CDD14E8B8654D03C9A0B84D8FCCB9 /* SOTabBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 467BA24990A32B588507DC8A006C0D5B /* SOTabBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CCFE7CF23BF9FF5002E3B92 /* SOTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CC23BF9FF5002E3B92 /* SOTabBarViewController.swift */; };
+		3CCFE7D023BF9FF5002E3B92 /* SOTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CD23BF9FF5002E3B92 /* SOTabBarView.swift */; };
+		3CCFE7D123BF9FF5002E3B92 /* SOTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CE23BF9FF5002E3B92 /* SOTabView.swift */; };
+		659BBD7C1B8A12D7B2596F66A2C12C83 /* SOTabBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67808205CB6F0A77FE7C18966DBD32BD /* SOTabBar-dummy.m */; };
+		6691EC7119EA8AA06950232949E24405 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		6CBBCD5545934F99990CB6B11A819136 /* Pods-SOTabBar_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B16DFFEEEE6928AC9B1E80D2B2457A /* Pods-SOTabBar_Example-dummy.m */; };
+		816917B0E66B2F0E0425EED44235004F /* Pods-SOTabBar_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E1EE3EA4BFB8E1246CCD7D69400E5C /* Pods-SOTabBar_Tests-dummy.m */; };
+		ADB30FBD9398533FE93C32708C880652 /* Pods-SOTabBar_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE015042326E57A5FB1AA43F10934A5 /* Pods-SOTabBar_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD32E138287EF554BBC9AD69E6EB6FA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		E158E0A1DFD422F2E9721700D1069F59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D1E06DFE62C8EB68BDE5328182664D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72E5B623ECA74F6688263222A158278A;
+			remoteInfo = "Pods-SOTabBar_Example";
+		};
+		A65FA0B8FF0F0A0C1D7C690548B20721 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6ACF3335315E86A27831CC929125D4C;
+			remoteInfo = SOTabBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A01151D126575399887978A12D0193 /* Pods-SOTabBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SOTabBar_Example.release.xcconfig"; sourceTree = "<group>"; };
+		18B16DFFEEEE6928AC9B1E80D2B2457A /* Pods-SOTabBar_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SOTabBar_Example-dummy.m"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		35F011C918767DA541FF78AC2511DBB1 /* Pods_SOTabBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOTabBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE2278390A22536853FDBAC5DB48F84 /* SOTabBar.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SOTabBar.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		3CCFE7CC23BF9FF5002E3B92 /* SOTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SOTabBarViewController.swift; path = SOTabBar/Classes/SOTabBarViewController.swift; sourceTree = "<group>"; };
+		3CCFE7CD23BF9FF5002E3B92 /* SOTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SOTabBarView.swift; path = SOTabBar/Classes/SOTabBarView.swift; sourceTree = "<group>"; };
+		3CCFE7CE23BF9FF5002E3B92 /* SOTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SOTabView.swift; path = SOTabBar/Classes/SOTabView.swift; sourceTree = "<group>"; };
+		459F63EECC4D1CA7FFED876FEC927079 /* SOTabBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SOTabBar.xcconfig; sourceTree = "<group>"; };
+		467BA24990A32B588507DC8A006C0D5B /* SOTabBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SOTabBar-umbrella.h"; sourceTree = "<group>"; };
+		4D40CFD4EEF4DEB584AC8F646EE653B9 /* Pods-SOTabBar_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SOTabBar_Tests.modulemap"; sourceTree = "<group>"; };
+		5A97DCCE1B408EFCD7D6675613D6B46C /* Pods-SOTabBar_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SOTabBar_Tests-Info.plist"; sourceTree = "<group>"; };
+		64821BA5D0F65CED7C0F63549780CE19 /* Pods-SOTabBar_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SOTabBar_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		671D479EC4351ADCC690119052CE9830 /* Pods-SOTabBar_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SOTabBar_Example-umbrella.h"; sourceTree = "<group>"; };
+		67808205CB6F0A77FE7C18966DBD32BD /* SOTabBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SOTabBar-dummy.m"; sourceTree = "<group>"; };
+		7850DA0B46C210C1E4A3FBBF6929A258 /* SOTabBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SOTabBar-prefix.pch"; sourceTree = "<group>"; };
+		7C0FDAC99D2FB81EF9DA0EC9E9FE223D /* SOTabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SOTabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		847D6EED9B5D0F6F31011BBCC6475D62 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		99E862D32FE37C969C1DEF608760EB91 /* Pods-SOTabBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SOTabBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9AA084567D8995F3322C575ECD25105B /* Pods-SOTabBar_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SOTabBar_Example-frameworks.sh"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5F6AAE9B296374B6F11D89B674396BA /* Pods-SOTabBar_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SOTabBar_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		ABF6A90783C4F1D9A9CBF398BB669180 /* Pods-SOTabBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SOTabBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B70018FB164ADB4E8376EF0C1EAB005C /* SOTabBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SOTabBar.modulemap; sourceTree = "<group>"; };
+		BE35307DD1CC9F84721425074024D4EA /* Pods-SOTabBar_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SOTabBar_Example.modulemap"; sourceTree = "<group>"; };
+		C1E4B3B9B8BB0619FD1D364EE5444876 /* Pods-SOTabBar_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SOTabBar_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C1FA95DBC08D18185A89509B634F2649 /* Pods-SOTabBar_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SOTabBar_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C9E1EE3EA4BFB8E1246CCD7D69400E5C /* Pods-SOTabBar_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SOTabBar_Tests-dummy.m"; sourceTree = "<group>"; };
+		CA87568E36EE9B0A261CB47F94B3B708 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CEE015042326E57A5FB1AA43F10934A5 /* Pods-SOTabBar_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SOTabBar_Tests-umbrella.h"; sourceTree = "<group>"; };
+		CF740AC0FA87BCEA1E18EC9572C348CA /* Pods-SOTabBar_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SOTabBar_Example-Info.plist"; sourceTree = "<group>"; };
+		E7815ABAE50ED7C882B4AFC72066CCD4 /* SOTabBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SOTabBar-Info.plist"; sourceTree = "<group>"; };
+		E9CFCE761B6B22F94D3F4B21BE69FD31 /* Pods_SOTabBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOTabBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED3045F1059CB09127EB1B5BC90CCEDC /* Pods-SOTabBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SOTabBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A3FFAF822B96C955CDA612FABF65832 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD32E138287EF554BBC9AD69E6EB6FA9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DD877C0EEE389C9FD1CD4927CCB0FA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6691EC7119EA8AA06950232949E24405 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFCD7E17D84267575C441166BF780AA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E158E0A1DFD422F2E9721700D1069F59 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0244A6B78DD403B0AAF9286C071EF715 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				91B9492FF0B12C9ED658E808956C7451 /* Pods-SOTabBar_Example */,
+				1B05CC78890993103DB0804E1AF4D796 /* Pods-SOTabBar_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1B05CC78890993103DB0804E1AF4D796 /* Pods-SOTabBar_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4D40CFD4EEF4DEB584AC8F646EE653B9 /* Pods-SOTabBar_Tests.modulemap */,
+				C1E4B3B9B8BB0619FD1D364EE5444876 /* Pods-SOTabBar_Tests-acknowledgements.markdown */,
+				C1FA95DBC08D18185A89509B634F2649 /* Pods-SOTabBar_Tests-acknowledgements.plist */,
+				C9E1EE3EA4BFB8E1246CCD7D69400E5C /* Pods-SOTabBar_Tests-dummy.m */,
+				5A97DCCE1B408EFCD7D6675613D6B46C /* Pods-SOTabBar_Tests-Info.plist */,
+				CEE015042326E57A5FB1AA43F10934A5 /* Pods-SOTabBar_Tests-umbrella.h */,
+				99E862D32FE37C969C1DEF608760EB91 /* Pods-SOTabBar_Tests.debug.xcconfig */,
+				ED3045F1059CB09127EB1B5BC90CCEDC /* Pods-SOTabBar_Tests.release.xcconfig */,
+			);
+			name = "Pods-SOTabBar_Tests";
+			path = "Target Support Files/Pods-SOTabBar_Tests";
+			sourceTree = "<group>";
+		};
+		1FDE5497072B11C95724A17F218972D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9CFCE761B6B22F94D3F4B21BE69FD31 /* Pods_SOTabBar_Example.framework */,
+				35F011C918767DA541FF78AC2511DBB1 /* Pods_SOTabBar_Tests.framework */,
+				7C0FDAC99D2FB81EF9DA0EC9E9FE223D /* SOTabBar.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F7778D79EF4D4A7724855F0DD5C92C0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B70018FB164ADB4E8376EF0C1EAB005C /* SOTabBar.modulemap */,
+				459F63EECC4D1CA7FFED876FEC927079 /* SOTabBar.xcconfig */,
+				67808205CB6F0A77FE7C18966DBD32BD /* SOTabBar-dummy.m */,
+				E7815ABAE50ED7C882B4AFC72066CCD4 /* SOTabBar-Info.plist */,
+				7850DA0B46C210C1E4A3FBBF6929A258 /* SOTabBar-prefix.pch */,
+				467BA24990A32B588507DC8A006C0D5B /* SOTabBar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SOTabBar";
+			sourceTree = "<group>";
+		};
+		328ABFFF5A7F75345E8B35195BDAFAD8 /* SOTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				3CCFE7CC23BF9FF5002E3B92 /* SOTabBarViewController.swift */,
+				3CCFE7CD23BF9FF5002E3B92 /* SOTabBarView.swift */,
+				3CCFE7CE23BF9FF5002E3B92 /* SOTabView.swift */,
+				ED1070B8413A4BE03EB4E517FC2EF341 /* Pod */,
+				2F7778D79EF4D4A7724855F0DD5C92C0 /* Support Files */,
+			);
+			name = SOTabBar;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		91B9492FF0B12C9ED658E808956C7451 /* Pods-SOTabBar_Example */ = {
+			isa = PBXGroup;
+			children = (
+				BE35307DD1CC9F84721425074024D4EA /* Pods-SOTabBar_Example.modulemap */,
+				A5F6AAE9B296374B6F11D89B674396BA /* Pods-SOTabBar_Example-acknowledgements.markdown */,
+				64821BA5D0F65CED7C0F63549780CE19 /* Pods-SOTabBar_Example-acknowledgements.plist */,
+				18B16DFFEEEE6928AC9B1E80D2B2457A /* Pods-SOTabBar_Example-dummy.m */,
+				9AA084567D8995F3322C575ECD25105B /* Pods-SOTabBar_Example-frameworks.sh */,
+				CF740AC0FA87BCEA1E18EC9572C348CA /* Pods-SOTabBar_Example-Info.plist */,
+				671D479EC4351ADCC690119052CE9830 /* Pods-SOTabBar_Example-umbrella.h */,
+				ABF6A90783C4F1D9A9CBF398BB669180 /* Pods-SOTabBar_Example.debug.xcconfig */,
+				00A01151D126575399887978A12D0193 /* Pods-SOTabBar_Example.release.xcconfig */,
+			);
+			name = "Pods-SOTabBar_Example";
+			path = "Target Support Files/Pods-SOTabBar_Example";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				F0CA981C2A1308E9F9435848E3840183 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				1FDE5497072B11C95724A17F218972D1 /* Products */,
+				0244A6B78DD403B0AAF9286C071EF715 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED1070B8413A4BE03EB4E517FC2EF341 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				847D6EED9B5D0F6F31011BBCC6475D62 /* LICENSE */,
+				CA87568E36EE9B0A261CB47F94B3B708 /* README.md */,
+				3BE2278390A22536853FDBAC5DB48F84 /* SOTabBar.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F0CA981C2A1308E9F9435848E3840183 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				328ABFFF5A7F75345E8B35195BDAFAD8 /* SOTabBar */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2F39AE27E57D13F5837C687CFF02C41C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB30FBD9398533FE93C32708C880652 /* Pods-SOTabBar_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D24AF78CA996A814D7C869508011EAE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08EB6378B4F0463DB168639A72823CB2 /* Pods-SOTabBar_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F34146D74C8A202AB8462E03F83DCC2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				301CDD14E8B8654D03C9A0B84D8FCCB9 /* SOTabBar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		26CFB68DF30EDFEAC8AFDC6769FF175D /* Pods-SOTabBar_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6484315A445EEE1491EEBC1607E263E /* Build configuration list for PBXNativeTarget "Pods-SOTabBar_Tests" */;
+			buildPhases = (
+				2F39AE27E57D13F5837C687CFF02C41C /* Headers */,
+				9821FB17335BF37DA795BB3D13F6B655 /* Sources */,
+				DFCD7E17D84267575C441166BF780AA4 /* Frameworks */,
+				BCE19828452D6BDDE3ACB17E169C1768 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A992C87EEBC2444EC9BEA57748FCBD2 /* PBXTargetDependency */,
+			);
+			name = "Pods-SOTabBar_Tests";
+			productName = "Pods-SOTabBar_Tests";
+			productReference = 35F011C918767DA541FF78AC2511DBB1 /* Pods_SOTabBar_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		72E5B623ECA74F6688263222A158278A /* Pods-SOTabBar_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CD331E4F0095E4A54B53C18A0F7D212 /* Build configuration list for PBXNativeTarget "Pods-SOTabBar_Example" */;
+			buildPhases = (
+				7D24AF78CA996A814D7C869508011EAE /* Headers */,
+				43B7BB0FC515083ECBCB659F555EE588 /* Sources */,
+				0A3FFAF822B96C955CDA612FABF65832 /* Frameworks */,
+				0F2046863A491E34CB9AB9C006B85BC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B60B9EB58CDA9272A30112493DBFA54 /* PBXTargetDependency */,
+			);
+			name = "Pods-SOTabBar_Example";
+			productName = "Pods-SOTabBar_Example";
+			productReference = E9CFCE761B6B22F94D3F4B21BE69FD31 /* Pods_SOTabBar_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C6ACF3335315E86A27831CC929125D4C /* SOTabBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28B49D0BB0A3B14A246E32143BDAF2B3 /* Build configuration list for PBXNativeTarget "SOTabBar" */;
+			buildPhases = (
+				8F34146D74C8A202AB8462E03F83DCC2 /* Headers */,
+				18ABF7F1CD4B7D9CB65D666457467C00 /* Sources */,
+				4DD877C0EEE389C9FD1CD4927CCB0FA8 /* Frameworks */,
+				C7D84EE38FE578E12E93E98C84A448B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SOTabBar;
+			productName = SOTabBar;
+			productReference = 7C0FDAC99D2FB81EF9DA0EC9E9FE223D /* SOTabBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					72E5B623ECA74F6688263222A158278A = {
+						LastSwiftMigration = 1100;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 1FDE5497072B11C95724A17F218972D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72E5B623ECA74F6688263222A158278A /* Pods-SOTabBar_Example */,
+				26CFB68DF30EDFEAC8AFDC6769FF175D /* Pods-SOTabBar_Tests */,
+				C6ACF3335315E86A27831CC929125D4C /* SOTabBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F2046863A491E34CB9AB9C006B85BC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE19828452D6BDDE3ACB17E169C1768 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7D84EE38FE578E12E93E98C84A448B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18ABF7F1CD4B7D9CB65D666457467C00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				659BBD7C1B8A12D7B2596F66A2C12C83 /* SOTabBar-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43B7BB0FC515083ECBCB659F555EE588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CCFE7D023BF9FF5002E3B92 /* SOTabBarView.swift in Sources */,
+				3CCFE7CF23BF9FF5002E3B92 /* SOTabBarViewController.swift in Sources */,
+				3CCFE7D123BF9FF5002E3B92 /* SOTabView.swift in Sources */,
+				6CBBCD5545934F99990CB6B11A819136 /* Pods-SOTabBar_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9821FB17335BF37DA795BB3D13F6B655 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				816917B0E66B2F0E0425EED44235004F /* Pods-SOTabBar_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B60B9EB58CDA9272A30112493DBFA54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SOTabBar;
+			target = C6ACF3335315E86A27831CC929125D4C /* SOTabBar */;
+			targetProxy = A65FA0B8FF0F0A0C1D7C690548B20721 /* PBXContainerItemProxy */;
+		};
+		9A992C87EEBC2444EC9BEA57748FCBD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SOTabBar_Example";
+			target = 72E5B623ECA74F6688263222A158278A /* Pods-SOTabBar_Example */;
+			targetProxy = 0D1E06DFE62C8EB68BDE5328182664D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09B9E3D10820EB8BB3CA40CB36B2196F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00A01151D126575399887978A12D0193 /* Pods-SOTabBar_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SOTabBar_Example/Pods-SOTabBar_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SOTabBar_Example/Pods-SOTabBar_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5E86282EDCF5FB78E8E821992D8556B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459F63EECC4D1CA7FFED876FEC927079 /* SOTabBar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SOTabBar/SOTabBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SOTabBar/SOTabBar-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SOTabBar/SOTabBar.modulemap";
+				PRODUCT_MODULE_NAME = SOTabBar;
+				PRODUCT_NAME = SOTabBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AF7B66ADBCEDC77F66E81BE24E6B14AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459F63EECC4D1CA7FFED876FEC927079 /* SOTabBar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SOTabBar/SOTabBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SOTabBar/SOTabBar-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SOTabBar/SOTabBar.modulemap";
+				PRODUCT_MODULE_NAME = SOTabBar;
+				PRODUCT_NAME = SOTabBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B0166239DCD8E0BF38A3FB382A8B0699 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99E862D32FE37C969C1DEF608760EB91 /* Pods-SOTabBar_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SOTabBar_Tests/Pods-SOTabBar_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SOTabBar_Tests/Pods-SOTabBar_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BA6960C06DB84B267F38592424DD870F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED3045F1059CB09127EB1B5BC90CCEDC /* Pods-SOTabBar_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SOTabBar_Tests/Pods-SOTabBar_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SOTabBar_Tests/Pods-SOTabBar_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D0BF0B5CD4E655378B39CF14EB46090B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABF6A90783C4F1D9A9CBF398BB669180 /* Pods-SOTabBar_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SOTabBar_Example/Pods-SOTabBar_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SOTabBar_Example/Pods-SOTabBar_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28B49D0BB0A3B14A246E32143BDAF2B3 /* Build configuration list for PBXNativeTarget "SOTabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E86282EDCF5FB78E8E821992D8556B1 /* Debug */,
+				AF7B66ADBCEDC77F66E81BE24E6B14AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CD331E4F0095E4A54B53C18A0F7D212 /* Build configuration list for PBXNativeTarget "Pods-SOTabBar_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0BF0B5CD4E655378B39CF14EB46090B /* Debug */,
+				09B9E3D10820EB8BB3CA40CB36B2196F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6484315A445EEE1491EEBC1607E263E /* Build configuration list for PBXNativeTarget "Pods-SOTabBar_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0166239DCD8E0BF38A3FB382A8B0699 /* Debug */,
+				BA6960C06DB84B267F38592424DD870F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

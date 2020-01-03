@@ -1,0 +1,22 @@
+{
+  "name": "SOTabBar",
+  "version": "0.1.0",
+  "summary": "A short description of SOTabBar.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Ahmadalsofi/SOTabBar",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ahmadalsofi": "alsofiahmad@yahoo.com"
+  },
+  "source": {
+    "git": "https://github.com/Ahmadalsofi/SOTabBar.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SOTabBar/Classes/**/*"
+}
