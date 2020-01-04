@@ -34,7 +34,7 @@
 </p>
 
 ## 📋 Requirements
-SOTabBar requires iOS 9.3 or above; and is compatibile with Swift 4/5.
+SOTabBar requires iOS 9.3 or above, and is compatibile with Swift 4/5.
 
 ## 📲 Installation
 ### CocoaPods
