@@ -38,14 +38,14 @@ SOTabBar requires iOS 9.3 or above; and is compatibile with Swift 4/5.
 
 ## 📲 Installation
 ### CocoaPods
-Tabman is available through [CocoaPods](http://cocoapods.org):
+SOTabBar is available through [CocoaPods](http://cocoapods.org):
 
 ```ruby
 pod 'SOTabBar'
 ```
 
 ### Carthage
-Tabman is also available through [Carthage](https://github.com/Carthage/Carthage):
+SOTabBar is also available through [Carthage](https://github.com/Carthage/Carthage):
 
 ```ogdl
 github "Ahmadalsofi/SOTabBar"
