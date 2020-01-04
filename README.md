@@ -86,7 +86,7 @@ class MainViewController: SOTabBarViewController {
 
 
 ## 🎨 Customization
-**You can set your customization before return the array of the viewcontrollers**
+**You should set your customization before return the array of the viewcontrollers**
 
 ```swift
 class MainViewController: SOTabBarViewController {
