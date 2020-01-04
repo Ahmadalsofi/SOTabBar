@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - develop
+    
+jobs:
+  build:
+
+    runs-on: macos
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Publish to CocoaPod register
+      env:
+        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+      run: |
+        pod trunk push SOTabBar.podspec --skip-import-validation --allow-warnings
