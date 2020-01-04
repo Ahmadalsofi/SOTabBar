@@ -1,0 +1,11 @@
+framework module SOTabBar {
+  umbrella header "SOTabBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module SOTabBar.Swift {
+    header "SOTabBar-Swift.h"
+    requires objc
+}

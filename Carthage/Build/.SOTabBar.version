@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "387837ec103627cbb17a9d35f43cee41a67ca31b",
+  "iOS" : [
+    {
+      "name" : "SOTabBar",
+      "hash" : "7a7ddb203a90f1d0f517cb824cc8ad17514fcefb5f47778e717df778c444acbb",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ]
+}
