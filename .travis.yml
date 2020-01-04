@@ -10,5 +10,6 @@ language: objective-c
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/SOTabBar.xcworkspace -scheme SOTabBar-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -workspace $XCWORKSPACE -scheme $XCSCHEME  -destination 'platform=iOS Simulator,name=iPhone 6 Plus' | xcpretty -c && exit ${PIPESTATUS[0]}
 - pod lib lint
+
