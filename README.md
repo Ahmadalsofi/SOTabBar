@@ -30,7 +30,7 @@
 	<br>
 	<br>
 	<br>
-    <img src="Screenshots/headerGif.gif" width="520" height="225"/>
+    <img src="Screenshots/headerGif.gif" width="520" height="216"/>
 </p>
 
 ## 📋 Requirements
@@ -150,7 +150,7 @@ class MainViewController: SOTabBarViewController {
 ```swift
     SOTabBarSetting.tabBarAnimationDurationTime = 2
 ```
-<img src="Screenshots/tabBarAnimationDurationTime_2.gif" width="240" height="110"/>
+<img src="Screenshots/tabBarAnimationDurationTime_2.gif" width="240" height="104"/>
 
 
 ## 👨🏻‍💻 Author
