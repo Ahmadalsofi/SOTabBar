@@ -9,7 +9,12 @@ language: objective-c
 # before_install:
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
+env:
+  - DESTINATION="OS=12.1,name=iPhone XS" SCHEME="SOTabBar-Example" SDK=iphonesimulator
 script:
-- set -o pipefail && xcodebuild test -workspace $XCWORKSPACE -scheme $XCSCHEME  -destination 'platform=iOS Simulator,name=iPhone 6 Plus' | xcpretty -c && exit ${PIPESTATUS[0]}
-- pod lib lint
+- set -o pipefail
+  - xcodebuild -version
+  - xcodebuild clean build -project SOTabBar.xcodeproj -scheme "$SCHEME" -sdk "$SDK"
+  - xcodebuild -project SOTabBar.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty
+  - pod lib lint
 
