@@ -33,6 +33,13 @@
     <img src="Screenshots/headerGif.gif" width="520" height="216"/>
 </p>
 
+
+---
+
+<p align="center"><img src="Screenshots/trending.png?raw=true"/></p>
+
+---
+
 ## 📋 Requirements
 SOTabBar requires iOS 9.3 or above, and is compatibile with Swift 4/5.
 
