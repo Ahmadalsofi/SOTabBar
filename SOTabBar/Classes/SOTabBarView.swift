@@ -17,7 +17,7 @@ protocol SOTabBarViewDelegate: AnyObject {
 @available(iOS 10.0, *)
 public class SOTabBarView: UIView {
     
-   internal var viewControllers: [UIViewController]! {
+   internal var viewControllers = [UIViewController]() {
         didSet {
             drawTabs()
             guard !viewControllers.isEmpty else { return }

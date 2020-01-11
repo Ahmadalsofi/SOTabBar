@@ -12,7 +12,7 @@ open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
     public var selectedIndex: Int = 0
     public var previousSelectedIndex = 0
     
-    public var viewControllers: [UIViewController]! {
+    public var viewControllers = [UIViewController]() {
         didSet {
             tabBar.viewControllers = viewControllers
         }
@@ -60,10 +60,10 @@ open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
     
     open func tabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int) {
         
-        let previousVC = viewControllers?[index]
-        previousVC?.willMove(toParent: nil)
-        previousVC?.view.removeFromSuperview()
-        previousVC?.removeFromParent()
+        let previousVC = viewControllers[index]
+        previousVC.willMove(toParent: nil)
+        previousVC.view.removeFromSuperview()
+        previousVC.removeFromParent()
         previousSelectedIndex = selectedIndex
         
         let vc = viewControllers[index]
