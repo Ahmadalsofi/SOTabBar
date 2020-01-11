@@ -46,10 +46,6 @@ public class SOTabBarView: UIView {
         return imageView
     }()
     
-    private var tabWidth: CGFloat {
-        return UIScreen.main.bounds.width / CGFloat(viewControllers.count)
-    }
-    
     weak var tabBarDelegate: SOTabBarDelegate?
     
     private var selectedIndex: Int = 0
@@ -178,7 +174,11 @@ public class SOTabBarView: UIView {
 
 @available(iOS 10.0, *)
 private extension SOTabBarView {
-    
+
+    var tabWidth: CGFloat {
+        return UIScreen.main.bounds.width / CGFloat(viewControllers.count)
+    }
+
     var circlePath: CGPath {
         let startPoint_X = CGFloat(previousSelectedIndex) * CGFloat(tabWidth) - (tabWidth * 0.5)
         let endPoint_X = CGFloat(selectedIndex ) * CGFloat(tabWidth) - (tabWidth * 0.5)
