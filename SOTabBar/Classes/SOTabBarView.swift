@@ -7,6 +7,13 @@
 //
 
 import UIKit
+
+// use this protocol to detect when a tab bar item is pressed
+@available(iOS 10.0, *)
+protocol SOTabBarDelegate: AnyObject {
+     func soTabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int)
+}
+
 @available(iOS 10.0, *)
 public class SOTabBarView: UIView {
     

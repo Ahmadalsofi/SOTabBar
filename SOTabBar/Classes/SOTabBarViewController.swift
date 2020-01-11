@@ -79,11 +79,5 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
         vc.didMove(toParent: self)
         
     }
+    
 }
-
-// use this protocol to detect when a tab bar item is pressed
-@available(iOS 10.0, *)
-protocol SOTabBarDelegate: AnyObject {
-     func soTabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int)
-}
-
