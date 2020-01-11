@@ -10,10 +10,14 @@ import UIKit
 import SOTabBar
 class ViewController: SOTabBarViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func loadView() {
+        super.loadView()
         SOTabBarSetting.tabBarTintColor = #colorLiteral(red: 2.248547389e-05, green: 0.7047000527, blue: 0.6947537661, alpha: 1)
         SOTabBarSetting.tabBarCircleSize = CGSize(width: 60, height: 60)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         let homeStoryboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HOME_ID")
         let chatStoryboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CHAT_ID")
