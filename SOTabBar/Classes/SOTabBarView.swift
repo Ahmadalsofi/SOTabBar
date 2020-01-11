@@ -10,7 +10,7 @@ import UIKit
 
 // use this protocol to detect when a tab bar item is pressed
 @available(iOS 10.0, *)
-protocol SOTabBarDelegate: AnyObject {
+protocol SOTabBarViewDelegate: AnyObject {
      func soTabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int)
 }
 
@@ -56,7 +56,7 @@ public class SOTabBarView: UIView {
         return imageView
     }()
     
-    weak var tabBarDelegate: SOTabBarDelegate?
+    weak var tabBarDelegate: SOTabBarViewDelegate?
     
     private var selectedIndex: Int = 0
     private var previousSelectedIndex = 0

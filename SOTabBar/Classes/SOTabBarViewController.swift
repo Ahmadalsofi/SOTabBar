@@ -7,7 +7,7 @@
 //
 import UIKit
 @available(iOS 10.0, *)
-open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
+open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
     
     public var selectedIndex: Int = 0
     public var previousSelectedIndex = 0
