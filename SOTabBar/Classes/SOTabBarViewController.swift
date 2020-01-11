@@ -41,10 +41,6 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
     }
     
     private func drawConstraint() {
-        let safeAreaView = UIView()
-        safeAreaView.backgroundColor = SOTabBarSetting.tabBarBackground
-        self.view.addSubview(safeAreaView)
-        
         var constraints = [NSLayoutConstraint]()
         if #available(iOS 11.0, *) {
             constraints.append(containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -(SOTabBarSetting.tabBarHeight)))
@@ -64,14 +60,7 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
         constraints.append(soTabBar.leadingAnchor.constraint(equalTo: view.leadingAnchor))
         constraints.append(soTabBar.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarHeight))
         
-        safeAreaView.translatesAutoresizingMaskIntoConstraints = false
-        constraints.append(safeAreaView.topAnchor.constraint(equalTo: soTabBar.bottomAnchor))
-        constraints.append(safeAreaView.trailingAnchor.constraint(equalTo: view.trailingAnchor))
-        constraints.append(safeAreaView.leadingAnchor.constraint(equalTo: view.leadingAnchor))
-        constraints.append(safeAreaView.bottomAnchor.constraint(equalTo: view.bottomAnchor))
-
         view.bringSubviewToFront(soTabBar)
-        view.bringSubviewToFront(safeAreaView)
         constraints.forEach({ $0.isActive = true })
     }
     
