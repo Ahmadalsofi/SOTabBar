@@ -11,7 +11,7 @@ import UIKit
 // use this protocol to detect when a tab bar item is pressed
 @available(iOS 10.0, *)
 protocol SOTabBarViewDelegate: AnyObject {
-     func soTabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int)
+     func tabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int)
 }
 
 @available(iOS 10.0, *)
@@ -141,7 +141,7 @@ public class SOTabBarView: UIView {
         previousSelectedIndex = selectedIndex
         selectedIndex  = index + 1
         
-        tabBarDelegate?.soTabBar(self, didSelectTabAt: index)
+        tabBarDelegate?.tabBar(self, didSelectTabAt: index)
         animateCircle(with: circlePath)
         animateImage()
         

@@ -58,7 +58,7 @@ open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
         NSLayoutConstraint.activate(constraints)
     }
     
-    open func soTabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int) {
+    open func tabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int) {
         
         let previousVC = viewControllers?[index]
         previousVC?.willMove(toParent: nil)
