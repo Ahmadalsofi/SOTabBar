@@ -56,7 +56,7 @@ public class SOTabBarView: UIView {
         return imageView
     }()
     
-    weak var tabBarDelegate: SOTabBarViewDelegate?
+    weak var delegate: SOTabBarViewDelegate?
     
     private var selectedIndex: Int = 0
     private var previousSelectedIndex = 0
@@ -141,7 +141,7 @@ public class SOTabBarView: UIView {
         previousSelectedIndex = selectedIndex
         selectedIndex  = index + 1
         
-        tabBarDelegate?.tabBar(self, didSelectTabAt: index)
+        delegate?.tabBar(self, didSelectTabAt: index)
         animateCircle(with: circlePath)
         animateImage()
         

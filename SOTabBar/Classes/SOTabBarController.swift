@@ -20,7 +20,7 @@ open class SOTabBarController: UIViewController, SOTabBarViewDelegate {
     
     private lazy var tabBar: SOTabBarView = {
         let tabBar = SOTabBarView()
-        tabBar.tabBarDelegate = self
+        tabBar.delegate = self
         tabBar.translatesAutoresizingMaskIntoConstraints = false
         return tabBar
     }()
