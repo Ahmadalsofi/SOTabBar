@@ -42,16 +42,16 @@ class SOTabView: UIView {
     private func drawConstraints() {
         self.addSubview(titleLabel)
         self.addSubview(tabImageView)
-        var constraints = [NSLayoutConstraint]()
-        constraints.append(tabImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor))
-        constraints.append(tabImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor))
-        constraints.append(tabImageView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeImage))
-        constraints.append(tabImageView.widthAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeImage))
-        constraints.append(titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: SOTabBarSetting.tabBarHeight))
-        constraints.append(titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor))
-        constraints.append(titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor))
-        constraints.append(titleLabel.heightAnchor.constraint(equalToConstant: 26))
-        constraints.forEach({ $0.isActive = true })
+        NSLayoutConstraint.activate([
+            tabImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            tabImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            tabImageView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeImage),
+            tabImageView.widthAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeImage),
+            titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: SOTabBarSetting.tabBarHeight),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            titleLabel.heightAnchor.constraint(equalToConstant: 26)
+        ])
     }
     
     required init?(coder: NSCoder) {
