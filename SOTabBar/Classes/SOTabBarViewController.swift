@@ -23,6 +23,7 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
         soBarView.viewControllers = viewControllers
         soBarView.setupView()
         soBarView.tabBarDelegate = self
+        soBarView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(soBarView)
         return soBarView
     }()
@@ -54,7 +55,6 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
         constraints.append(containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor))
         constraints.append(containerView.topAnchor.constraint(equalTo: view.topAnchor))
         
-        soTabBar.translatesAutoresizingMaskIntoConstraints = false
         if #available(iOS 11.0, *) {
             constraints.append(soTabBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor))
            } else {
