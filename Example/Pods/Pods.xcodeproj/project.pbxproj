@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08EB6378B4F0463DB168639A72823CB2 /* Pods-SOTabBar_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 671D479EC4351ADCC690119052CE9830 /* Pods-SOTabBar_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D57BAE423CA5E8400D4EECE /* SOTabBarSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57BAE223CA5DD500D4EECE /* SOTabBarSetting.swift */; };
+		2D12A44F23CA8D1E00C824EB /* SOTabBarSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D12A44E23CA8D1E00C824EB /* SOTabBarSetting.swift */; };
 		301CDD14E8B8654D03C9A0B84D8FCCB9 /* SOTabBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 467BA24990A32B588507DC8A006C0D5B /* SOTabBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CCFE7D223BFA335002E3B92 /* SOTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CD23BF9FF5002E3B92 /* SOTabBarView.swift */; };
 		3CCFE7D323BFA337002E3B92 /* SOTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CC23BF9FF5002E3B92 /* SOTabBarController.swift */; };
@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		00A01151D126575399887978A12D0193 /* Pods-SOTabBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SOTabBar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		18B16DFFEEEE6928AC9B1E80D2B2457A /* Pods-SOTabBar_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SOTabBar_Example-dummy.m"; sourceTree = "<group>"; };
-		2D57BAE223CA5DD500D4EECE /* SOTabBarSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOTabBarSetting.swift; sourceTree = "<group>"; };
+		2D12A44E23CA8D1E00C824EB /* SOTabBarSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SOTabBarSetting.swift; path = SOTabBar/Classes/SOTabBarSetting.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		35F011C918767DA541FF78AC2511DBB1 /* Pods_SOTabBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOTabBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE2278390A22536853FDBAC5DB48F84 /* SOTabBar.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SOTabBar.podspec; sourceTree = "<group>"; tabWidth = 2; };
@@ -158,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				3CCFE7CC23BF9FF5002E3B92 /* SOTabBarController.swift */,
-				2D57BAE223CA5DD500D4EECE /* SOTabBarSetting.swift */,
+				2D12A44E23CA8D1E00C824EB /* SOTabBarSetting.swift */,
 				3CCFE7CD23BF9FF5002E3B92 /* SOTabBarView.swift */,
 				3CCFE7CE23BF9FF5002E3B92 /* SOTabView.swift */,
 				ED1070B8413A4BE03EB4E517FC2EF341 /* Pod */,
@@ -380,7 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CCFE7D323BFA337002E3B92 /* SOTabBarController.swift in Sources */,
-				2D57BAE423CA5E8400D4EECE /* SOTabBarSetting.swift in Sources */,
+				2D12A44F23CA8D1E00C824EB /* SOTabBarSetting.swift in Sources */,
 				3CCFE7D223BFA335002E3B92 /* SOTabBarView.swift in Sources */,
 				3CCFE7D423BFA33A002E3B92 /* SOTabView.swift in Sources */,
 				659BBD7C1B8A12D7B2596F66A2C12C83 /* SOTabBar-dummy.m in Sources */,
