@@ -43,22 +43,18 @@ open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
     private func drawConstraint() {
         var constraints = [NSLayoutConstraint]()
         if #available(iOS 11.0, *) {
-            constraints.append(containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -(SOTabBarSetting.tabBarHeight)))
+            constraints += [containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -(SOTabBarSetting.tabBarHeight)),
+                            tabBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)]
         } else {
-            constraints.append(containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(SOTabBarSetting.tabBarHeight)))
+            constraints += [containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(SOTabBarSetting.tabBarHeight)),
+                            tabBar.bottomAnchor.constraint(equalTo: view.bottomAnchor)]
         }
-        constraints.append(containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor))
-        constraints.append(containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor))
-        constraints.append(containerView.topAnchor.constraint(equalTo: view.topAnchor))
-        
-        if #available(iOS 11.0, *) {
-            constraints.append(tabBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor))
-        } else {
-            constraints.append(tabBar.bottomAnchor.constraint(equalTo: view.bottomAnchor))
-        }
-        constraints.append(tabBar.trailingAnchor.constraint(equalTo: view.trailingAnchor))
-        constraints.append(tabBar.leadingAnchor.constraint(equalTo: view.leadingAnchor))
-        constraints.append(tabBar.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarHeight))
+        constraints += [containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                        containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                        containerView.topAnchor.constraint(equalTo: view.topAnchor),
+                        tabBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                        tabBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                        tabBar.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarHeight)]
         NSLayoutConstraint.activate(constraints)
     }
     
