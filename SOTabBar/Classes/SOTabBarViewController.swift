@@ -14,13 +14,13 @@ open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
     
     public var viewControllers: [UIViewController]! {
         didSet {
+            soTabBar.viewControllers = viewControllers
             drawConstraint()
         }
     }
     
     private lazy var soTabBar: SOTabBarView = {
         let soBarView = SOTabBarView()
-        soBarView.viewControllers = viewControllers
         soBarView.tabBarDelegate = self
         soBarView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(soBarView)
