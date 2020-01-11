@@ -44,7 +44,7 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
         var constraints = [NSLayoutConstraint]()
         if #available(iOS 11.0, *) {
             constraints.append(containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -(SOTabBarSetting.tabBarHeight)))
-           } else {
+        } else {
             constraints.append(containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(SOTabBarSetting.tabBarHeight)))
         }
         constraints.append(containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor))
@@ -53,7 +53,7 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
         
         if #available(iOS 11.0, *) {
             constraints.append(soTabBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor))
-           } else {
+        } else {
             constraints.append(soTabBar.bottomAnchor.constraint(equalTo: view.bottomAnchor))
         }
         constraints.append(soTabBar.trailingAnchor.constraint(equalTo: view.trailingAnchor))
@@ -61,7 +61,7 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
         constraints.append(soTabBar.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarHeight))
         
         view.bringSubviewToFront(soTabBar)
-        constraints.forEach({ $0.isActive = true })
+        NSLayoutConstraint.activate(constraints)
     }
     
     open func soTabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int) {
