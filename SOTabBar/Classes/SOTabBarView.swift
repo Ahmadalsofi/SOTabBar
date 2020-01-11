@@ -143,7 +143,7 @@ public class SOTabBarView: UIView {
         selectedIndex  = index + 1
         
         tabBarDelegate?.soTabBar(self, didSelectTabAt: index)
-        animateCircle(with: circlePath())
+        animateCircle(with: circlePath)
         animateImage()
         
         guard let image = self.viewControllers[index].tabBarItem.selectedImage else {
@@ -166,17 +166,6 @@ public class SOTabBarView: UIView {
         }
     }
     
-    private func circlePath() -> CGPath {
-        let startPoint_X =  CGFloat(previousSelectedIndex) * CGFloat(tabWidth) - (tabWidth * 0.5)
-        let endPoint_X = CGFloat(selectedIndex ) * CGFloat(tabWidth) - (tabWidth * 0.5)
-        let y = SOTabBarSetting.tabBarHeight * 0.1
-        
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: startPoint_X, y: y))
-        path.addLine(to: CGPoint(x: endPoint_X, y: y))
-        return path.cgPath
-    }
-    
     private func animateCircle(with path: CGPath) {
         let caframeAnimation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
         caframeAnimation.path = path
@@ -185,4 +174,19 @@ public class SOTabBarView: UIView {
         caframeAnimation.isRemovedOnCompletion = false
         innerCircleView.layer.add(caframeAnimation, forKey: "circleLayerAnimationKey")
     }
+}
+
+@available(iOS 10.0, *)
+private extension SOTabBarView {
+    
+    var circlePath: CGPath {
+        let startPoint_X = CGFloat(previousSelectedIndex) * CGFloat(tabWidth) - (tabWidth * 0.5)
+        let endPoint_X = CGFloat(selectedIndex ) * CGFloat(tabWidth) - (tabWidth * 0.5)
+        let y = SOTabBarSetting.tabBarHeight * 0.1
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: startPoint_X, y: y))
+        path.addLine(to: CGPoint(x: endPoint_X, y: y))
+        return path.cgPath
+    }
+    
 }
