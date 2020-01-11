@@ -34,8 +34,9 @@ open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(tabBar)
         self.view.addSubview(containerView)
+        self.view.addSubview(tabBar)
+        self.view.bringSubviewToFront(tabBar)
         self.drawConstraint()
     }
     
@@ -58,8 +59,6 @@ open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
         constraints.append(tabBar.trailingAnchor.constraint(equalTo: view.trailingAnchor))
         constraints.append(tabBar.leadingAnchor.constraint(equalTo: view.leadingAnchor))
         constraints.append(tabBar.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarHeight))
-        
-        view.bringSubviewToFront(tabBar)
         NSLayoutConstraint.activate(constraints)
     }
     
