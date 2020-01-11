@@ -23,7 +23,6 @@ open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
         let soBarView = SOTabBarView()
         soBarView.tabBarDelegate = self
         soBarView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(soBarView)
         return soBarView
     }()
     
@@ -36,6 +35,7 @@ open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(soTabBar)
         self.view.addSubview(containerView)
     }
     
