@@ -8,7 +8,7 @@
 
 import UIKit
 import SOTabBar
-class ViewController: SOTabBarViewController {
+class ViewController: SOTabBarController {
 
     override func loadView() {
         super.loadView()

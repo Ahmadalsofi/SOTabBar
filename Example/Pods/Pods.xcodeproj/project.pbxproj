@@ -11,7 +11,7 @@
 		2D57BAE423CA5E8400D4EECE /* SOTabBarSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57BAE223CA5DD500D4EECE /* SOTabBarSetting.swift */; };
 		301CDD14E8B8654D03C9A0B84D8FCCB9 /* SOTabBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 467BA24990A32B588507DC8A006C0D5B /* SOTabBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CCFE7D223BFA335002E3B92 /* SOTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CD23BF9FF5002E3B92 /* SOTabBarView.swift */; };
-		3CCFE7D323BFA337002E3B92 /* SOTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CC23BF9FF5002E3B92 /* SOTabBarViewController.swift */; };
+		3CCFE7D323BFA337002E3B92 /* SOTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CC23BF9FF5002E3B92 /* SOTabBarController.swift */; };
 		3CCFE7D423BFA33A002E3B92 /* SOTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCFE7CE23BF9FF5002E3B92 /* SOTabView.swift */; };
 		659BBD7C1B8A12D7B2596F66A2C12C83 /* SOTabBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67808205CB6F0A77FE7C18966DBD32BD /* SOTabBar-dummy.m */; };
 		6691EC7119EA8AA06950232949E24405 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -46,7 +46,7 @@
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		35F011C918767DA541FF78AC2511DBB1 /* Pods_SOTabBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOTabBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE2278390A22536853FDBAC5DB48F84 /* SOTabBar.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SOTabBar.podspec; sourceTree = "<group>"; tabWidth = 2; };
-		3CCFE7CC23BF9FF5002E3B92 /* SOTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SOTabBarViewController.swift; path = SOTabBar/Classes/SOTabBarViewController.swift; sourceTree = "<group>"; };
+		3CCFE7CC23BF9FF5002E3B92 /* SOTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SOTabBarController.swift; path = SOTabBar/Classes/SOTabBarController.swift; sourceTree = "<group>"; };
 		3CCFE7CD23BF9FF5002E3B92 /* SOTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SOTabBarView.swift; path = SOTabBar/Classes/SOTabBarView.swift; sourceTree = "<group>"; };
 		3CCFE7CE23BF9FF5002E3B92 /* SOTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SOTabView.swift; path = SOTabBar/Classes/SOTabView.swift; sourceTree = "<group>"; };
 		459F63EECC4D1CA7FFED876FEC927079 /* SOTabBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SOTabBar.xcconfig; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		328ABFFF5A7F75345E8B35195BDAFAD8 /* SOTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				3CCFE7CC23BF9FF5002E3B92 /* SOTabBarViewController.swift */,
+				3CCFE7CC23BF9FF5002E3B92 /* SOTabBarController.swift */,
 				2D57BAE223CA5DD500D4EECE /* SOTabBarSetting.swift */,
 				3CCFE7CD23BF9FF5002E3B92 /* SOTabBarView.swift */,
 				3CCFE7CE23BF9FF5002E3B92 /* SOTabView.swift */,
@@ -379,7 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCFE7D323BFA337002E3B92 /* SOTabBarViewController.swift in Sources */,
+				3CCFE7D323BFA337002E3B92 /* SOTabBarController.swift in Sources */,
 				2D57BAE423CA5E8400D4EECE /* SOTabBarSetting.swift in Sources */,
 				3CCFE7D223BFA335002E3B92 /* SOTabBarView.swift in Sources */,
 				3CCFE7D423BFA33A002E3B92 /* SOTabView.swift in Sources */,

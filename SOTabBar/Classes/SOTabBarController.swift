@@ -1,5 +1,5 @@
 //
-//  SOTabBarViewController.swift
+//  SOTabBarController.swift
 //  SOTabBar
 //
 //  Created by ahmad alsofi on 1/3/20.
@@ -7,7 +7,7 @@
 //
 import UIKit
 @available(iOS 10.0, *)
-open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
+open class SOTabBarController: UIViewController, SOTabBarViewDelegate {
     
     public var selectedIndex: Int = 0
     public var previousSelectedIndex = 0
