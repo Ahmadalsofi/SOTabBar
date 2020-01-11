@@ -29,13 +29,14 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
     
     private lazy var containerView: UIView = {
         let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = UIColor.white
-        self.view.addSubview(view)
         return view
     }()
     
     override open func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(containerView)
     }
     
     private func drawConstraint() {
@@ -44,8 +45,6 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
         self.view.addSubview(safeAreaView)
         
         var constraints = [NSLayoutConstraint]()
-        
-        containerView.translatesAutoresizingMaskIntoConstraints = false
         if #available(iOS 11.0, *) {
             constraints.append(containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -(SOTabBarSetting.tabBarHeight)))
            } else {
