@@ -13,6 +13,9 @@ public class SOTabBarView: UIView {
    internal var viewControllers: [UIViewController]! {
         didSet {
             drawTabs()
+            guard !viewControllers.isEmpty else { return }
+            drawConstraint()
+            didSelectTab(index: 0)
         }
     }
     
@@ -67,13 +70,6 @@ public class SOTabBarView: UIView {
         layer.shadowOpacity = 0.6
         layer.shadowOffset = CGSize(width: 0, height: -2)
         layer.shadowRadius = 3
-    }
-    
-    internal func setupView() {
-        drawConstraint()
-        DispatchQueue.main.async { [weak self] in
-            self?.didSelectTab(index: 0)
-        }
     }
     
     private func drawTabs() {

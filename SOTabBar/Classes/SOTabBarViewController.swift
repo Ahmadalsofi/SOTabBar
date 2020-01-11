@@ -21,7 +21,6 @@ open class SOTabBarViewController: UIViewController, SOTabBarDelegate {
     private lazy var soTabBar: SOTabBarView = {
         let soBarView = SOTabBarView()
         soBarView.viewControllers = viewControllers
-        soBarView.setupView()
         soBarView.tabBarDelegate = self
         soBarView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(soBarView)
