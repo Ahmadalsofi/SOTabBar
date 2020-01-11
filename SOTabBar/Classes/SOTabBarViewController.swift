@@ -15,7 +15,6 @@ open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
     public var viewControllers: [UIViewController]! {
         didSet {
             soTabBar.viewControllers = viewControllers
-            drawConstraint()
         }
     }
     
@@ -37,6 +36,7 @@ open class SOTabBarViewController: UIViewController, SOTabBarViewDelegate {
         super.viewDidLoad()
         self.view.addSubview(soTabBar)
         self.view.addSubview(containerView)
+        self.drawConstraint()
     }
     
     private func drawConstraint() {
