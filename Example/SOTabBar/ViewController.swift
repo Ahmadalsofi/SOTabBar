@@ -34,9 +34,5 @@ class ViewController: SOTabBarController {
         viewControllers = [homeStoryboard, chatStoryboard,sleepStoryboard,musicStoryboard,meStoryboard]
     }
     
-    override func tabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int) {
-        super.tabBar(tabBar, didSelectTabAt: index)
-        print("did Tapped On \(index)")
-    }
 }
 
