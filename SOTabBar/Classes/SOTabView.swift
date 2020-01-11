@@ -19,10 +19,15 @@ class SOTabView: UIView {
         lbl.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.semibold)
         lbl.textColor = UIColor.darkGray
         lbl.textAlignment = .center
+        lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
     
-    private lazy var tabImageView: UIImageView = UIImageView(image: image)
+    private lazy var tabImageView: UIImageView = {
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
     
     init(tabBar: UITabBarItem) {
         guard let selecteImage = tabBar.image else {
@@ -38,14 +43,10 @@ class SOTabView: UIView {
         self.addSubview(titleLabel)
         self.addSubview(tabImageView)
         var constraints = [NSLayoutConstraint]()
-        
-        tabImageView.translatesAutoresizingMaskIntoConstraints = false
         constraints.append(tabImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor))
         constraints.append(tabImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor))
         constraints.append(tabImageView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeImage))
         constraints.append(tabImageView.widthAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeImage))
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         constraints.append(titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: SOTabBarSetting.tabBarHeight))
         constraints.append(titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor))
         constraints.append(titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor))
