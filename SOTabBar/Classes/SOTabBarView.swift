@@ -153,16 +153,9 @@ public class SOTabBarView: UIView {
     }
     
     private func animateTitle(index: Int) {
-        for i in self.stackView.arrangedSubviews {
-            if i == stackView.arrangedSubviews[index] {
-                if let barView = self.stackView.arrangedSubviews[index] as? SOTabView {
-                    barView.animateTabSelected()
-                }
-            }else {
-                if let barView = i as? SOTabView {
-                    barView.animateTabDeSelect()
-                }
-            }
+        self.stackView.arrangedSubviews.enumerated().forEach {
+            guard let tabView = $1 as? SOTabView else { return }
+            ($0 == index ? tabView.animateTabSelected : tabView.animateTabDeSelect)()
         }
     }
     
