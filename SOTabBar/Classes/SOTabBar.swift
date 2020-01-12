@@ -81,7 +81,7 @@ public class SOTabBar: UIView {
     
     private func drawTabs() {
         for vc in viewControllers {
-            let barView = SOTabView(tabBar: vc.tabBarItem)
+            let barView = SOTabBarItem(tabBar: vc.tabBarItem)
             barView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarHeight).isActive = true
             barView.translatesAutoresizingMaskIntoConstraints = false
             barView.isUserInteractionEnabled = false
@@ -153,7 +153,7 @@ public class SOTabBar: UIView {
     
     private func animateTitle(index: Int) {
         self.stackView.arrangedSubviews.enumerated().forEach {
-            guard let tabView = $1 as? SOTabView else { return }
+            guard let tabView = $1 as? SOTabBarItem else { return }
             ($0 == index ? tabView.animateTabSelected : tabView.animateTabDeSelect)()
         }
     }

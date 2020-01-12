@@ -1,5 +1,5 @@
 //
-//  SOTabView.swift
+//  SOTabBarItem.swift
 //  SOTabBar
 //
 //  Created by ahmad alsofi on 1/3/20.
@@ -7,8 +7,9 @@
 //
 
 import UIKit
+
 @available(iOS 10.0, *)
-class SOTabView: UIView {
+class SOTabBarItem: UIView {
     
     let image: UIImage
     let title: String
