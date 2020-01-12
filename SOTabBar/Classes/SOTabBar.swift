@@ -1,5 +1,5 @@
 //
-//  SOTabBarView.swift
+//  SOTabBar.swift
 //  SOTabBar
 //
 //  Created by ahmad alsofi on 1/3/20.
@@ -11,11 +11,11 @@ import UIKit
 // use this protocol to detect when a tab bar item is pressed
 @available(iOS 10.0, *)
 protocol SOTabBarViewDelegate: AnyObject {
-     func tabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int)
+     func tabBar(_ tabBar: SOTabBar, didSelectTabAt index: Int)
 }
 
 @available(iOS 10.0, *)
-public class SOTabBarView: UIView {
+public class SOTabBar: UIView {
     
    internal var viewControllers = [UIViewController]() {
         didSet {
@@ -176,7 +176,7 @@ public class SOTabBarView: UIView {
 }
 
 @available(iOS 10.0, *)
-private extension SOTabBarView {
+private extension SOTabBar {
 
     var tabWidth: CGFloat {
         return UIScreen.main.bounds.width / CGFloat(viewControllers.count)

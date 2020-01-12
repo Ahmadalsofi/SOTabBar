@@ -26,8 +26,8 @@ open class SOTabBarController: UIViewController, SOTabBarViewDelegate {
         }
     }
     
-    private lazy var tabBar: SOTabBarView = {
-        let tabBar = SOTabBarView()
+    private lazy var tabBar: SOTabBar = {
+        let tabBar = SOTabBar()
         tabBar.delegate = self
         tabBar.translatesAutoresizingMaskIntoConstraints = false
         return tabBar
@@ -66,7 +66,7 @@ open class SOTabBarController: UIViewController, SOTabBarViewDelegate {
         NSLayoutConstraint.activate(constraints)
     }
     
-    func tabBar(_ tabBar: SOTabBarView, didSelectTabAt index: Int) {
+    func tabBar(_ tabBar: SOTabBar, didSelectTabAt index: Int) {
         
         let previousVC = viewControllers[index]
         previousVC.willMove(toParent: nil)
