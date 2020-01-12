@@ -81,7 +81,7 @@ public class SOTabBar: UIView {
     
     private func drawTabs() {
         for vc in viewControllers {
-            let barView = SOTabBarItem(tabBar: vc.tabBarItem)
+            let barView = SOTabBarItem(tabBarItem: vc.tabBarItem)
             barView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarHeight).isActive = true
             barView.translatesAutoresizingMaskIntoConstraints = false
             barView.isUserInteractionEnabled = false

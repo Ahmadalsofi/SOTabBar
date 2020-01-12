@@ -30,12 +30,12 @@ class SOTabBarItem: UIView {
         return imageView
     }()
     
-    init(tabBar: UITabBarItem) {
-        guard let selecteImage = tabBar.image else {
+    init(tabBarItem item: UITabBarItem) {
+        guard let selecteImage = item.image else {
             fatalError("You should set image to all view controllers")
         }
         self.image = selecteImage
-        self.title = tabBar.title ?? ""
+        self.title = item.title ?? ""
         super.init(frame: .zero)
         drawConstraints()
     }
