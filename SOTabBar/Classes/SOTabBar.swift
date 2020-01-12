@@ -95,34 +95,33 @@ public class SOTabBar: UIView {
       
         innerCircleView.addSubview(outerCircleView)
         outerCircleView.addSubview(tabSelectedImageView)
- 
-        var constraints = [NSLayoutConstraint]()
         
         innerCircleView.frame.size = SOTabBarSetting.tabBarCircleSize
         innerCircleView.layer.cornerRadius = SOTabBarSetting.tabBarCircleSize.width / 2
         
         outerCircleView.layer.cornerRadius = (innerCircleView.frame.size.height - 10) / 2
-        constraints.append(outerCircleView.centerYAnchor.constraint(equalTo: self.innerCircleView.centerYAnchor))
-        constraints.append(outerCircleView.centerXAnchor.constraint(equalTo: self.innerCircleView.centerXAnchor))
-        constraints.append(outerCircleView.heightAnchor.constraint(equalToConstant: innerCircleView.frame.size.height - 10))
-        constraints.append(outerCircleView.widthAnchor.constraint(equalToConstant: innerCircleView.frame.size.width - 10))
-        
-        constraints.append(tabSelectedImageView.centerYAnchor.constraint(equalTo: outerCircleView.centerYAnchor))
-        constraints.append(tabSelectedImageView.centerXAnchor.constraint(equalTo: outerCircleView.centerXAnchor))
-        constraints.append(tabSelectedImageView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeSelectedImage))
-        constraints.append(tabSelectedImageView.widthAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeSelectedImage))
         
         stackView.frame = self.bounds.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+        
+        var constraints = [
+            outerCircleView.centerYAnchor.constraint(equalTo: self.innerCircleView.centerYAnchor),
+            outerCircleView.centerXAnchor.constraint(equalTo: self.innerCircleView.centerXAnchor),
+            outerCircleView.heightAnchor.constraint(equalToConstant: innerCircleView.frame.size.height - 10),
+            outerCircleView.widthAnchor.constraint(equalToConstant: innerCircleView.frame.size.width - 10),
+            tabSelectedImageView.centerYAnchor.constraint(equalTo: outerCircleView.centerYAnchor),
+            tabSelectedImageView.centerXAnchor.constraint(equalTo: outerCircleView.centerXAnchor),
+            tabSelectedImageView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeSelectedImage),
+            tabSelectedImageView.widthAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeSelectedImage),
+            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            stackView.topAnchor.constraint(equalTo: self.topAnchor)
+        ]
         if #available(iOS 11.0, *) {
             constraints.append(stackView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor))
         } else {
             constraints.append(stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor))
         }
-        constraints.append(stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor))
-        constraints.append(stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor))
-        constraints.append(stackView.topAnchor.constraint(equalTo: self.topAnchor))
-    
-        constraints.forEach({ $0.isActive = true })
+        NSLayoutConstraint.activate(constraints)
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
