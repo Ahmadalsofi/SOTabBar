@@ -13,7 +13,7 @@ public protocol SOTabBarControllerDelegate: NSObjectProtocol {
 }
 
 @available(iOS 10.0, *)
-open class SOTabBarController: UIViewController, SOTabBarViewDelegate {
+open class SOTabBarController: UIViewController, SOTabBarDelegate {
     
     weak open var delegate: SOTabBarControllerDelegate?
     
