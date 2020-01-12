@@ -19,6 +19,7 @@ class ViewController: SOTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.delegate = self
         let homeStoryboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HOME_ID")
         let chatStoryboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CHAT_ID")
         let sleepStoryboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SLEEP_ID")
@@ -36,3 +37,8 @@ class ViewController: SOTabBarController {
     
 }
 
+extension ViewController: SOTabBarControllerDelegate {
+    func tabBarController(_ tabBarController: SOTabBarController, didSelect viewController: UIViewController) {
+        print(viewController.tabBarItem.title ?? "")
+    }
+}

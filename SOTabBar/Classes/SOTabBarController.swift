@@ -6,8 +6,16 @@
 //  Copyright © 2020 ahmad alsofi. All rights reserved.
 //
 import UIKit
+
+@available(iOS 10.0, *)
+public protocol SOTabBarControllerDelegate: NSObjectProtocol {
+    func tabBarController(_ tabBarController: SOTabBarController, didSelect viewController: UIViewController)
+}
+
 @available(iOS 10.0, *)
 open class SOTabBarController: UIViewController, SOTabBarViewDelegate {
+    
+    weak open var delegate: SOTabBarControllerDelegate?
     
     public var selectedIndex: Int = 0
     public var previousSelectedIndex = 0
@@ -67,6 +75,7 @@ open class SOTabBarController: UIViewController, SOTabBarViewDelegate {
         previousSelectedIndex = selectedIndex
         
         let vc = viewControllers[index]
+        delegate?.tabBarController(self, didSelect: vc)
         addChild(vc)
         selectedIndex = index + 1
         vc.view.frame = containerView.bounds
