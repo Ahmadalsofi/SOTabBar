@@ -22,6 +22,7 @@ public class SOTabBar: UIView {
             drawTabs()
             guard !viewControllers.isEmpty else { return }
             drawConstraint()
+            layoutIfNeeded()
             didSelectTab(index: 0)
         }
     }
