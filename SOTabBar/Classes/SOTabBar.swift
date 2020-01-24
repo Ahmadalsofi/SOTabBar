@@ -1,5 +1,5 @@
 //
-//  SOTabBarView.swift
+//  SOTabBar.swift
 //  SOTabBar
 //
 //  Created by ahmad alsofi on 1/3/20.
@@ -7,12 +7,23 @@
 //
 
 import UIKit
+
+// use this protocol to detect when a tab bar item is pressed
 @available(iOS 10.0, *)
-public class SOTabBarView: UIView {
+protocol SOTabBarDelegate: AnyObject {
+     func tabBar(_ tabBar: SOTabBar, didSelectTabAt index: Int)
+}
+
+@available(iOS 10.0, *)
+public class SOTabBar: UIView {
     
-   internal var viewControllers: [UIViewController]! {
+   internal var viewControllers = [UIViewController]() {
         didSet {
             drawTabs()
+            guard !viewControllers.isEmpty else { return }
+            drawConstraint()
+            layoutIfNeeded()
+            didSelectTab(index: 0)
         }
     }
     
@@ -46,11 +57,7 @@ public class SOTabBarView: UIView {
         return imageView
     }()
     
-    private var tabWidth: CGFloat {
-        return UIScreen.main.bounds.width / CGFloat(viewControllers.count)
-    }
-    
-    weak var tabBarDelegate: SOTabBarDelegate?
+    weak var delegate: SOTabBarDelegate?
     
     private var selectedIndex: Int = 0
     private var previousSelectedIndex = 0
@@ -73,16 +80,9 @@ public class SOTabBarView: UIView {
         layer.shadowRadius = 3
     }
     
-    internal func setupView() {
-        drawConstraint()
-        DispatchQueue.main.async { [weak self] in
-            self?.didSelectTab(index: 0)
-        }
-    }
-    
     private func drawTabs() {
         for vc in viewControllers {
-            let barView = SOTabView(tabBar: vc.tabBarItem)
+            let barView = SOTabBarItem(tabBarItem: vc.tabBarItem)
             barView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarHeight).isActive = true
             barView.translatesAutoresizingMaskIntoConstraints = false
             barView.isUserInteractionEnabled = false
@@ -96,34 +96,33 @@ public class SOTabBarView: UIView {
       
         innerCircleView.addSubview(outerCircleView)
         outerCircleView.addSubview(tabSelectedImageView)
- 
-        var constraints = [NSLayoutConstraint]()
         
         innerCircleView.frame.size = SOTabBarSetting.tabBarCircleSize
         innerCircleView.layer.cornerRadius = SOTabBarSetting.tabBarCircleSize.width / 2
         
         outerCircleView.layer.cornerRadius = (innerCircleView.frame.size.height - 10) / 2
-        constraints.append(outerCircleView.centerYAnchor.constraint(equalTo: self.innerCircleView.centerYAnchor))
-        constraints.append(outerCircleView.centerXAnchor.constraint(equalTo: self.innerCircleView.centerXAnchor))
-        constraints.append(outerCircleView.heightAnchor.constraint(equalToConstant: innerCircleView.frame.size.height - 10))
-        constraints.append(outerCircleView.widthAnchor.constraint(equalToConstant: innerCircleView.frame.size.width - 10))
-        
-        constraints.append(tabSelectedImageView.centerYAnchor.constraint(equalTo: outerCircleView.centerYAnchor))
-        constraints.append(tabSelectedImageView.centerXAnchor.constraint(equalTo: outerCircleView.centerXAnchor))
-        constraints.append(tabSelectedImageView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeSelectedImage))
-        constraints.append(tabSelectedImageView.widthAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeSelectedImage))
         
         stackView.frame = self.bounds.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+        
+        var constraints = [
+            outerCircleView.centerYAnchor.constraint(equalTo: self.innerCircleView.centerYAnchor),
+            outerCircleView.centerXAnchor.constraint(equalTo: self.innerCircleView.centerXAnchor),
+            outerCircleView.heightAnchor.constraint(equalToConstant: innerCircleView.frame.size.height - 10),
+            outerCircleView.widthAnchor.constraint(equalToConstant: innerCircleView.frame.size.width - 10),
+            tabSelectedImageView.centerYAnchor.constraint(equalTo: outerCircleView.centerYAnchor),
+            tabSelectedImageView.centerXAnchor.constraint(equalTo: outerCircleView.centerXAnchor),
+            tabSelectedImageView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeSelectedImage),
+            tabSelectedImageView.widthAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeSelectedImage),
+            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            stackView.topAnchor.constraint(equalTo: self.topAnchor)
+        ]
         if #available(iOS 11.0, *) {
             constraints.append(stackView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor))
         } else {
             constraints.append(stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor))
         }
-        constraints.append(stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor))
-        constraints.append(stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor))
-        constraints.append(stackView.topAnchor.constraint(equalTo: self.topAnchor))
-    
-        constraints.forEach({ $0.isActive = true })
+        NSLayoutConstraint.activate(constraints)
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -142,8 +141,8 @@ public class SOTabBarView: UIView {
         previousSelectedIndex = selectedIndex
         selectedIndex  = index + 1
         
-        tabBarDelegate?.soTabBar(self, didSelectTabAt: index)
-        animateCircle(with: circlePath())
+        delegate?.tabBar(self, didSelectTabAt: index)
+        animateCircle(with: circlePath)
         animateImage()
         
         guard let image = self.viewControllers[index].tabBarItem.selectedImage else {
@@ -153,16 +152,9 @@ public class SOTabBarView: UIView {
     }
     
     private func animateTitle(index: Int) {
-        for i in self.stackView.arrangedSubviews {
-            if i == stackView.arrangedSubviews[index] {
-                if let barView = self.stackView.arrangedSubviews[index] as? SOTabView {
-                    barView.animateTabSelected()
-                }
-            }else {
-                if let barView = i as? SOTabView {
-                    barView.animateTabDeSelect()
-                }
-            }
+        self.stackView.arrangedSubviews.enumerated().forEach {
+            guard let tabView = $1 as? SOTabBarItem else { return }
+            ($0 == index ? tabView.animateTabSelected : tabView.animateTabDeSelect)()
         }
     }
     
@@ -173,17 +165,6 @@ public class SOTabBarView: UIView {
         }
     }
     
-    private func circlePath() -> CGPath {
-        let startPoint_X =  CGFloat(previousSelectedIndex) * CGFloat(tabWidth) - (tabWidth * 0.5)
-        let endPoint_X = CGFloat(selectedIndex ) * CGFloat(tabWidth) - (tabWidth * 0.5)
-        let y = SOTabBarSetting.tabBarHeight * 0.1
-        
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: startPoint_X, y: y))
-        path.addLine(to: CGPoint(x: endPoint_X, y: y))
-        return path.cgPath
-    }
-    
     private func animateCircle(with path: CGPath) {
         let caframeAnimation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
         caframeAnimation.path = path
@@ -192,4 +173,23 @@ public class SOTabBarView: UIView {
         caframeAnimation.isRemovedOnCompletion = false
         innerCircleView.layer.add(caframeAnimation, forKey: "circleLayerAnimationKey")
     }
+}
+
+@available(iOS 10.0, *)
+private extension SOTabBar {
+
+    var tabWidth: CGFloat {
+        return UIScreen.main.bounds.width / CGFloat(viewControllers.count)
+    }
+
+    var circlePath: CGPath {
+        let startPoint_X = CGFloat(previousSelectedIndex) * CGFloat(tabWidth) - (tabWidth * 0.5)
+        let endPoint_X = CGFloat(selectedIndex ) * CGFloat(tabWidth) - (tabWidth * 0.5)
+        let y = SOTabBarSetting.tabBarHeight * 0.1
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: startPoint_X, y: y))
+        path.addLine(to: CGPoint(x: endPoint_X, y: y))
+        return path.cgPath
+    }
+    
 }

@@ -98,14 +98,9 @@ class MainViewController: SOTabBarViewController {
 ```swift
 class MainViewController: SOTabBarViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // write here your customization before return the array
-
-	SOTabBarSetting.Properties of  Customized = value
-
-        let firstVC = FirstVC()
-        viewControllers = [firstVC]
+    override func loadView() {
+        super.loadView()
+	    // SOTabBarSetting.propertyToCustomize = value
     }
 }
 ```

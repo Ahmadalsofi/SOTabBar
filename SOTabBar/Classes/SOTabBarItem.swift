@@ -1,5 +1,5 @@
 //
-//  SOTabView.swift
+//  SOTabBarItem.swift
 //  SOTabBar
 //
 //  Created by ahmad alsofi on 1/3/20.
@@ -7,48 +7,52 @@
 //
 
 import UIKit
+
 @available(iOS 10.0, *)
-class SOTabView: UIView {
+class SOTabBarItem: UIView {
+    
+    let image: UIImage
+    let title: String
     
     private lazy var titleLabel: UILabel = {
         let lbl = UILabel()
+        lbl.text = self.title
         lbl.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.semibold)
         lbl.textColor = UIColor.darkGray
         lbl.textAlignment = .center
+        lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
     
     private lazy var tabImageView: UIImageView = {
-        return UIImageView()
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
-    init(tabBar: UITabBarItem){
-        super.init(frame: .zero)
-        guard let selecteImage = tabBar.image else {
+    init(tabBarItem item: UITabBarItem) {
+        guard let selecteImage = item.image else {
             fatalError("You should set image to all view controllers")
         }
-        tabImageView = UIImageView(image: selecteImage)
-        titleLabel.text = tabBar.title ?? ""
+        self.image = selecteImage
+        self.title = item.title ?? ""
+        super.init(frame: .zero)
         drawConstraints()
     }
     
     private func drawConstraints() {
         self.addSubview(titleLabel)
         self.addSubview(tabImageView)
-        var constraints = [NSLayoutConstraint]()
-        
-        tabImageView.translatesAutoresizingMaskIntoConstraints = false
-        constraints.append(tabImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor))
-        constraints.append(tabImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor))
-        constraints.append(tabImageView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeImage))
-        constraints.append(tabImageView.widthAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeImage))
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        constraints.append(titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: SOTabBarSetting.tabBarHeight))
-        constraints.append(titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor))
-        constraints.append(titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor))
-        constraints.append(titleLabel.heightAnchor.constraint(equalToConstant: 26))
-        constraints.forEach({ $0.isActive = true })
+        NSLayoutConstraint.activate([
+            tabImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            tabImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            tabImageView.heightAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeImage),
+            tabImageView.widthAnchor.constraint(equalToConstant: SOTabBarSetting.tabBarSizeImage),
+            titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: SOTabBarSetting.tabBarHeight),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            titleLabel.heightAnchor.constraint(equalToConstant: 26)
+        ])
     }
     
     required init?(coder: NSCoder) {
