@@ -34,11 +34,12 @@
 </p>
 
 
-
+---
 <a href="https://github.motakasoft.com/trending/?d=2020-01-08&l=swift">
 <p align="center"><img src="Screenshots/trending.png?raw=true"/></p>
 </a>
 
+---
 
 ## 📋 Requirements
 SOTabBar requires iOS 9.3 or above, and is compatibile with Swift 4/5.
