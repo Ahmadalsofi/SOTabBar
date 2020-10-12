@@ -157,7 +157,7 @@ class MainViewController: SOTabBarViewController {
 
 
 ## 👨🏻‍💻 Author
-- Created by [Ahmad AlSofi](https://www.linkedin.com/in/ahmad-alsofi-677787177/)
+- Created by [Ahmad AlSofi](https://www.linkedin.com/in/ahmadalsofi/)
 - Ahmadalsofi, alsofiahmad@yahoo.com
 
 ## ❤️ Contributing
