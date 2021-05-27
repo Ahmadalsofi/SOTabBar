@@ -91,6 +91,9 @@ public class SOTabBar: UIView {
     }
     
     private func drawConstraint() {
+        if SOTabBarSetting.isRTL {
+            self.stackView.layer.setAffineTransform(CGAffineTransform(scaleX: -1, y: 1))
+        }
         addSubview(stackView)
         addSubview(innerCircleView)
       

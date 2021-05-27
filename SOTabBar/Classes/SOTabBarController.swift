@@ -45,6 +45,9 @@ open class SOTabBarController: UIViewController, SOTabBarDelegate {
         self.view.addSubview(containerView)
         self.view.addSubview(tabBar)
         self.view.bringSubviewToFront(tabBar)
+        if SOTabBarSetting.isRTL {
+            self.tabBar.layer.setAffineTransform(CGAffineTransform(scaleX: -1, y: 1))
+        }
         self.drawConstraint()
     }
     

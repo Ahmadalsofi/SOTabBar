@@ -14,11 +14,11 @@ class SOTabBarItem: UIView {
     let image: UIImage
     let title: String
     
-    private lazy var titleLabel: UILabel = {
+    lazy var titleLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = self.title
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.semibold)
-        lbl.textColor = UIColor.darkGray
+        lbl.font =  SOTabBarSetting.tabbarFont
+        lbl.textColor = SOTabBarSetting.tabBarTextColor
         lbl.textAlignment = .center
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
